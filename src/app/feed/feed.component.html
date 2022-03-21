@@ -1,0 +1,36 @@
+<div class="form-group " style="text-align: center; padding: 20px;">
+
+  <input type="text" class="form-control"  placeholder="Enter Keyword for filter result" [(ngModel)]="searchedKeyword">
+
+</div>
+<cdk-virtual-scroll-viewport itemSize="2"  class="example-viewport">
+<div class="content">
+
+  <div *cdkVirtualFor="let im of images | filter:searchedKeyword" class="number" >
+    <mat-card  class="animated slideInRight">
+      <mat-card-title-group>
+
+        <mat-card-title ><p id="example-text "class="animated slideInRight">{{im.author}}</mat-card-title>
+
+        <img mat-card-lg-image src="{{im.photo}}" >
+      </mat-card-title-group>
+      <mat-card-content >
+        {{im.text}}
+      </mat-card-content>
+      <mat-card-actions>
+<button (click)="LikeButtonClick(im.id,im.photo)" style="background-color: pink "><mat-icon>favorite</mat-icon>
+
+</button>
+
+
+      </mat-card-actions>
+    </mat-card>
+
+</div>
+</div>
+</cdk-virtual-scroll-viewport>
+
+
+
+
+

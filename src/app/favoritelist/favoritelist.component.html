@@ -1,0 +1,28 @@
+<div *ngIf="message.length !=0">
+  <div class="content" >
+
+    <div class="number" >
+      <mat-card class="animated slideInRight">
+        <mat-card-title-group>
+          <mat-card-title ><p id="example-text "class="animated slideInRight">{{message.author}}</mat-card-title>
+
+          <img mat-card-lg-image src="{{message.photo}}" >
+        </mat-card-title-group>
+        <mat-card-content >
+          {{message.text}}
+        </mat-card-content>
+        <mat-card-actions>
+
+     <button (click)="Delete()"><span class="material-icons">
+delete
+</span></button>
+        </mat-card-actions>
+
+      </mat-card>
+
+    </div>
+  </div>
+</div>
+
+
+

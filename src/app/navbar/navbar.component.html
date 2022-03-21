@@ -1,0 +1,22 @@
+<mat-toolbar color="primary" class="mat-elevation-z8" ng-app="angularscopeapp">
+  <span><mat-icon>code</mat-icon>
+  Encore
+  </span>
+  <div class="spacer"></div>
+  <a mat-button routerLink="home">Home</a>
+  
+  <a mat-raised-button color="accent" routerLink="favorites" class="">Favorites</a>
+  <button mat-button [matMenuTriggerFor]="menu" >
+    <mat-icon matBadge="15" matBadgeColor="warn">home</mat-icon>
+    <!-- Include text description of the icon's meaning for screen-readers -->
+    <span class="cdk-visually-hidden">
+      Example with a home icon with overlaid badge showing the number 15
+    </span>
+  </button>
+<mat-menu #menu="matMenu" >
+  <div *ngFor="let im of favs" class="number" >
+    <img mat-card-lg-image src="{{im.photo}}" alt="text">
+  </div>
+</mat-menu>
+  
+</mat-toolbar>

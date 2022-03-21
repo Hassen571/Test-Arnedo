@@ -1,0 +1,43 @@
+.content {
+  padding: 1px;
+  align-content: space-between;
+  border: 50px;
+  text-align: center;
+
+
+}
+
+.container{
+  height: 1000px;
+
+
+
+}
+.number {
+  display: flex;
+  display: inline-flex;
+  align-items:center;
+  flex-wrap: wrap;
+  height: 450px;
+  width: 450px;
+}
+.example-card {
+  max-width: 250px;
+  border: black;
+
+
+
+
+}
+.search-results-container{
+  margin: 40px;
+  height: 350px;
+  width: 500px;
+  overflow: auto;
+}
+mat-card{
+  border: 10px solid #156;
+  padding: 5px;
+
+
+}
